@@ -1,10 +1,13 @@
 import Cart from "./Cart";
 import Display from "./Display";
+import CartProvider from "./CartContext";
 export default function App() {
   return (
-    <div className="flex">
-      <Display />
-      <Cart />
-    </div>
-  )
+    <CartProvider>
+      <div className="flex">
+        <Display />
+        <Cart />
+      </div>
+    </CartProvider>
+  );
 }
